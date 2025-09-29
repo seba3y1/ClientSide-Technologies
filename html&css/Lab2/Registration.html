@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Page</title>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form action="Thankyou.html" method="post" enctype="multipart/form-data">
+    
+    <label for="firstName">First name:</label><br />
+    <input type="text" id="firstName" name="firstName" required /><br /><br />
+    
+    <label for="lastName">Last name:</label><br />
+    <input type="text" id="lastName" name="lastName" required /><br /><br />
+    
+    <label for="email">Email  :</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+    
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" /><br /><br />
+    
+    <label for="repeatPassword">Repeat password:</label><br />
+    <input type="password" id="repeatPassword" name="repeatPassword" /><br /><br />
+    
+    <label for="birthDate">Birth Date:</label><br />
+    <input type="date" id="birthDate" name="birthDate" /><br /><br />
+    
+    <label for="userPicture">User Picture:</label><br />
+    <input type="file"  name="userPicture" /><br /><br />
+    
+
+      <label>Gender</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+
+    <br />
+    
+    <label for="faculty">Faculty:</label><br />
+    <select id="faculty" name="faculty">
+      <option value="">--Select Faculty--</option>
+      <option value="science">Science</option>
+      <option value="engineering">Engineering</option>
+      <option value="arts">Arts</option>
+      <option value="business">Business</option>
+    </select>
+    <br /><br />
+    
+ 
+      <label>Interests</label>
+      <input type="checkbox" id="programming" name="interests" value="programming" />
+      <label for="programming">Programming</label><br />
+      <input type="checkbox" id="reading" name="interests" value="reading" />
+      <label for="reading">Reading</label><br />
+      <input type="checkbox" id="swimming" name="interests" value="swimming" />
+      <label for="swimming">Swimming</label><br />
+      <input type="checkbox" id="other" name="interests" value="other" />
+      <label for="other">Other</label><br />
+
+    <br />
+    
+    <label for="aboutYou">About you:</label><br />
+    <textarea id="aboutYou" name="aboutYou" rows="4" cols="40"></textarea>
+    <br /><br />
+    
+    <input type="checkbox" id="terms" name="terms" required />
+    <label for="terms">I agreed to terms and conditions</label><br /><br />
+    
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+  
+  </form>
+
+</body>
+</html>
