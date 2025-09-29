@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+
+    .card-container {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      transition: all 0.4s ease;
+    }
+
+    .card-header {
+      height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: right;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      color: #222;
+    }
+
+    .card-content p {
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      border-radius: 8px;
+      border: none;
+      color: #fff;
+      background: #007bff;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+    .btn_middle {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      border: #007bff 1px solid;
+      cursor: pointer;
+      color: #007bff;
+      background: #fff;    
+    }
+
+    .btn_middle:hover {
+      background: #0056b3;
+      color: #fff;
+        border: none;
+    }
+
+
+    
+    .card-footer {
+      border: 4px solid #28a745;
+      background: #bcf1c9;
+      color: #000;
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 6px;
+      margin: 12px;
+    }
+
+    
+    .card.image .card-header {
+      background: url("https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg") center/cover ;
+    }
+
+    .card.linear .card-header {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+
+    .card.radial .card-header {
+      background: radial-gradient(circle at top left, #87eecd, #2aec11);
+    }
+
+    
+    .card.radial:hover {
+      transform: scale(0.95);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    
+    .card.linear .card-footer:hover {
+      transform: skew(6deg, 3deg);
+    }
+
+    
+    .card.image .card-header:hover {
+      transform: rotate(4deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card radial">
+      <div class="card-header"></div>
+      <div class="card-content">
+        <h3>كرت بخلفية Radial Gradient</h3>
+        <p>على الهوفر، الكرت كله ينكمش ويزيد الظل.</p>
+        <button class="btn">تواصل</button>
+      </div>
+      <div class="card-footer">Flex Center + Border</div>
+    </div>
+
+    <div class="card linear">
+      <div class="card-header"></div>
+      <div class="card-content">
+        <h3>كرت بخلفية Linear Gradient</h3>
+        <p>على الهوفر، الفوتر فقط يعمل Skew بسيط.</p>
+        <button class="btn_middle">تفاصيل</button>
+      </div>
+      <div class="card-footer">skew(6deg, 3deg)</div>
+    </div>
+
+    <div class="card image">
+      <div class="card-header"></div>
+      <div class="card-content">
+        <h3>كرت بصورة خلفية</h3>
+        <p>على الهوفر، الهيدر فقط يميل قليلاً.</p>
+        <button class="btn">اقرأ المزيد</button>
+      </div>
+      <div class="card-footer">Flex Center + Border</div>
+    </div>
+  </div>
+</body>
+</html>
