@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something">
+    <button id="addButton">Add to Stack</button>
+    <button id="removeButton">Remove from Stack</button>
+    <div id="stackDisplay">
+        <h3>Stack Contents:</h3>
+        <ul id="stackList"></ul>
+    </div>
+<script>                  
+    let stack = [];
+
+    const inputField = document.getElementById('inputField');
+    const addButton = document.getElementById('addButton');
+    const removeButton = document.getElementById('removeButton');
+    const stackList = document.getElementById('stackList');
+
+    function updateStack() {
+        stackList.innerHTML = '';
+        for (let i = stack.length - 1; i >= 0; i--) {
+            const li = document.createElement('li');
+            li.textContent = stack[i];
+            stackList.appendChild(li);
+        }
+    }
+
+    addButton.addEventListener('click', () => {
+        const value = inputField.value;
+        if (value) {
+            stack.push(value);
+            inputField.value = '';
+            updateStack();
+        }
+    });
+
+    removeButton.addEventListener('click', () => {
+        stack.pop();
+        updateStack();
+    });
+</script>
+</body>
+</html>
